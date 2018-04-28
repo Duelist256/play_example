@@ -6,7 +6,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 GET     /secondIndex                controllers.HomeController.index2
-GET     /greeting                   controllers.HomeController.greeting(name: String)
+GET     /greeting:name              controllers.HomeController.greeting(name: String)
 GET     /echo                       controllers.HomeController.echo
 GET     /redirect                   controllers.HomeController.redirect
 GET     /dummyPage                  controllers.HomeController.dummyPage(name: String)
