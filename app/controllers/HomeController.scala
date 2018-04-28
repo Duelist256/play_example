@@ -1,7 +1,9 @@
 package controllers
 
+import akka.util.ByteString
 import javax.inject._
 import play.api._
+import play.api.http.HttpEntity
 import play.api.mvc._
 
 /**
@@ -21,4 +23,25 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def index() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
   }
+
+  def greeting(name: String) = Action { implicit request: Request[AnyContent] =>
+    Ok(s"Hello, $name!")
+  }
+
+  def echo = Action { implicit request =>
+    Ok("Got request [" + request + "]")
+  }
+
+  def index2 = Action {
+    Result(
+      header = ResponseHeader(200, Map.empty),
+      body = HttpEntity.Strict(ByteString("Hello World! Whacha doin?"), Some("text/plain"))
+    )
+  }
+
+  def redirect = Action {
+    Redirect("/greeting?name=Petuch")
+  }
+
+  def dummyPage(name: String): Action[AnyContent] = TODO
 }
