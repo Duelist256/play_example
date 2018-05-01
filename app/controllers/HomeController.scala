@@ -32,15 +32,15 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok("Got request [" + request + "]")
   }
 
-  def index2 = Action {
+  def index2: Action[AnyContent] = Action {
     Result(
       header = ResponseHeader(200, Map.empty),
       body = HttpEntity.Strict(ByteString("Hello World! Whacha doin?"), Some("text/plain"))
     )
   }
 
-  def redirect = Action {
-    Redirect("/greeting?name=Petuch")
+  def redirect: Action[AnyContent] = Action {
+    Redirect("/greetingPetuch")
   }
 
   def dummyPage(name: String): Action[AnyContent] = TODO

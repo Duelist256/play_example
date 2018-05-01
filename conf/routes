@@ -4,12 +4,39 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
-GET     /secondIndex                controllers.HomeController.index2
-GET     /greeting:name              controllers.HomeController.greeting(name: String)
-GET     /echo                       controllers.HomeController.echo
-GET     /redirect                   controllers.HomeController.redirect
-GET     /dummyPage                  controllers.HomeController.dummyPage(name: String)
+GET     /                                   controllers.HomeController.index
+GET     /secondIndex                        controllers.HomeController.index2
+GET     /greeting:name                      controllers.HomeController.greeting(name: String)
+GET     /echo                               controllers.HomeController.echo
+GET     /redirect                           controllers.HomeController.redirect
+GET     /dummyPage                          controllers.HomeController.dummyPage(name: String)
+
+# Examples from Routing
+GET     /routingExamples/fixedValue         controllers.RoutingExamplesController.fixedValue(name = "John")
+GET     /routingExamples/defaultValue       controllers.RoutingExamplesController.defaultValue(name ?= "John")
+GET     /routingExamples/optionalValue      controllers.RoutingExamplesController.optionalValue(version: Option[String])
+GET     /routingExamples/hello/:name        controllers.RoutingExamplesController.hello(name)
+GET     /routingExamples/helloBob           controllers.RoutingExamplesController.helloBob
+
+GET     /relative/foo/bar/hello             controllers.Relative.helloview
+GET     /relative/hello/:name               controllers.Relative.hello(name)
+
+GET     /resultExamples/returnHtml          controllers.ResultExamplesController.returnHtml
+GET     /resultExamples/returnWithHeaders   controllers.ResultExamplesController.returnHtmlWithHeaders
+GET     /resultExamples/returnWithCookies   controllers.ResultExamplesController.returnHtmlWithCookies
+GET     /resultExamples/discardCookies   controllers.ResultExamplesController.discardCookies
+
+# Redirects to https://www.playframework.com/ with 303 See Other
+GET   /default/about      controllers.Default.redirect(to = "https://www.playframework.com/")
+
+# Responds with 404 Not Found
+GET   /default/orders     controllers.Default.notFound
+
+# Responds with 500 Internal Server Error
+GET   /default/clients    controllers.Default.error
+
+# Responds with 501 Not Implemented
+GET   /default/posts      controllers.Default.todo
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET   /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
