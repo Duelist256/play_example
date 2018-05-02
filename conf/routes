@@ -28,15 +28,16 @@ GET     /resultExamples/discardCookies   controllers.ResultExamplesController.di
 
 # Redirects to https://www.playframework.com/ with 303 See Other
 GET   /default/about      controllers.Default.redirect(to = "https://www.playframework.com/")
-
 # Responds with 404 Not Found
 GET   /default/orders     controllers.Default.notFound
-
 # Responds with 500 Internal Server Error
 GET   /default/clients    controllers.Default.error
-
 # Responds with 501 Not Implemented
 GET   /default/posts      controllers.Default.todo
+
+# Examples from "The Scala Configuration API"
+GET     /configExamples/showConfig    controllers.ConfigExamplesController.showConfig
+GET     /configExamples/showCustomConfig    controllers.ConfigExamplesController.showCustomConfig
 
 # Map static resources from the /public folder to the /assets URL path
 GET   /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
