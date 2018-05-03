@@ -24,7 +24,7 @@ GET     /relative/hello/:name               controllers.Relative.hello(name)
 GET     /resultExamples/returnHtml          controllers.ResultExamplesController.returnHtml
 GET     /resultExamples/returnWithHeaders   controllers.ResultExamplesController.returnHtmlWithHeaders
 GET     /resultExamples/returnWithCookies   controllers.ResultExamplesController.returnHtmlWithCookies
-GET     /resultExamples/discardCookies   controllers.ResultExamplesController.discardCookies
+GET     /resultExamples/discardCookies      controllers.ResultExamplesController.discardCookies
 
 # Redirects to https://www.playframework.com/ with 303 See Other
 GET   /default/about      controllers.Default.redirect(to = "https://www.playframework.com/")
@@ -48,6 +48,12 @@ GET     /sessionExamples/showNewSession     controllers.SessionExamplesControlle
 GET     /sessionExamples/discardSession     controllers.SessionExamplesController.discardSession
 GET     /sessionExamples/showFlash          controllers.SessionExamplesController.showFlash
 GET     /sessionExamples/saveFlash          controllers.SessionExamplesController.saveFlash
+
+# Examples from "Session and Flash scopes"
+POST    /bodyParserExamples/saveJson        controllers.BodyParserExamples.saveJson
+POST    /bodyParserExamples/saveJson2       controllers.BodyParserExamples.saveJson2
+POST    /bodyParserExamples/tolerantJson    controllers.BodyParserExamples.tolerantJson
+POST    /bodyParserExamples/saveToFile      controllers.BodyParserExamples.saveToFile
 
 
 # Map static resources from the /public folder to the /assets URL path
