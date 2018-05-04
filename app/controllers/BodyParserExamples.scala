@@ -31,4 +31,9 @@ class BodyParserExamples @Inject()(cc: ControllerComponents) extends AbstractCon
   def saveToFile(): Action[File] = Action(parse.file(to = new File("body.txt"))) { request: Request[File] =>
     Ok("Saved the request content to " + request.body)
   }
+
+  // Accept only 10 bytes of data otherwise 413 error
+  def restrictedLength(): Action[String] = Action(parse.text(maxLength = 10)) { request: Request[String] =>
+    Ok("Got: " + request.body)
+  }
 }

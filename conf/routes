@@ -36,24 +36,26 @@ GET   /default/clients    controllers.Default.error
 GET   /default/posts      controllers.Default.todo
 
 # Examples from "The Scala Configuration API"
-GET     /configExamples/showConfig          controllers.ConfigExamplesController.showConfig
-GET     /configExamples/showCustomConfig    controllers.ConfigExamplesController.showCustomConfig
+GET     /configExamples/showConfig              controllers.ConfigExamplesController.showConfig
+GET     /configExamples/showCustomConfig        controllers.ConfigExamplesController.showCustomConfig
 
 # Examples from "Session and Flash scopes"
-GET     /sessionExamples/replaceSession     controllers.SessionExamplesController.replaceSession
-GET     /sessionExamples/addSession         controllers.SessionExamplesController.addSession
-GET     /sessionExamples/removeSession      controllers.SessionExamplesController.removeSession
-GET     /sessionExamples/showSession        controllers.SessionExamplesController.showSession
-GET     /sessionExamples/showNewSession     controllers.SessionExamplesController.showSession2
-GET     /sessionExamples/discardSession     controllers.SessionExamplesController.discardSession
-GET     /sessionExamples/showFlash          controllers.SessionExamplesController.showFlash
-GET     /sessionExamples/saveFlash          controllers.SessionExamplesController.saveFlash
+GET     /sessionExamples/replaceSession         controllers.SessionExamplesController.replaceSession
+GET     /sessionExamples/addSession             controllers.SessionExamplesController.addSession
+GET     /sessionExamples/removeSession          controllers.SessionExamplesController.removeSession
+GET     /sessionExamples/showSession            controllers.SessionExamplesController.showSession
+GET     /sessionExamples/showNewSession         controllers.SessionExamplesController.showSession2
+GET     /sessionExamples/discardSession         controllers.SessionExamplesController.discardSession
+GET     /sessionExamples/showFlash              controllers.SessionExamplesController.showFlash
+GET     /sessionExamples/saveFlash              controllers.SessionExamplesController.saveFlash
 
-# Examples from "Session and Flash scopes"
-POST    /bodyParserExamples/saveJson        controllers.BodyParserExamples.saveJson
-POST    /bodyParserExamples/saveJson2       controllers.BodyParserExamples.saveJson2
-POST    /bodyParserExamples/tolerantJson    controllers.BodyParserExamples.tolerantJson
-POST    /bodyParserExamples/saveToFile      controllers.BodyParserExamples.saveToFile
+# Examples from "Body Parsers"
+POST    /bodyParserExamples/saveJson            controllers.BodyParserExamples.saveJson
+POST    /bodyParserExamples/saveJson2           controllers.BodyParserExamples.saveJson2
+POST    /bodyParserExamples/tolerantJson        controllers.BodyParserExamples.tolerantJson
+POST    /bodyParserExamples/saveToFile          controllers.BodyParserExamples.saveToFile
+POST    /bodyParserExamples/restrictedLength    controllers.BodyParserExamples.restrictedLength
+POST    /customBodyParser/useParser             controllers.CustomBodyParser.useParser
 
 
 # Map static resources from the /public folder to the /assets URL path
