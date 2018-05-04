@@ -57,6 +57,10 @@ POST    /bodyParserExamples/saveToFile          controllers.BodyParserExamples.s
 POST    /bodyParserExamples/restrictedLength    controllers.BodyParserExamples.restrictedLength
 POST    /customBodyParser/useParser             controllers.CustomBodyParser.useParser
 
+# Examples from "Action Composition"
+GET     /actionBuildersExamples/testLoggingAction               controllers.action_composition.ActionCompositionController.testLoggingAction
+POST    /actionBuildersExamples/testAnotherLoggingAction        controllers.action_composition.ActionCompositionController.testAnotherLoggingAction
+POST    /actionBuildersExamples/testOneMoreAction               controllers.action_composition.ActionCompositionController.testOneMoreAction
 
 # Map static resources from the /public folder to the /assets URL path
 GET   /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
