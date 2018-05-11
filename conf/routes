@@ -62,10 +62,16 @@ GET     /actionBuildersExamples/testLoggingAction               controllers.acti
 POST    /actionBuildersExamples/testAnotherLoggingAction        controllers.action_composition.ActionCompositionController.testAnotherLoggingAction
 POST    /actionBuildersExamples/testOneMoreAction               controllers.action_composition.ActionCompositionController.testOneMoreAction
 
-# Examples from "Content negoriations"
+# Examples from "Content negotiations"
 GET     /contentNegotiations/showAcceptedLanguages      controllers.content_negotiations.ContentNegotiationsController.showAcceptedLanguages
 GET     /contentNegotiations/showAcceptedTypes          controllers.content_negotiations.ContentNegotiationsController.showAcceptedTypes
 POST    /contentNegotiations/testRender                 controllers.content_negotiations.ContentNegotiationsController.testRender
+
+# Examples from "JSON with HTTP"
+GET     /jsonWithHttp/listPlaces            controllers.json.with_http.JsonWithHttpExamplesController.listPlaces
+POST    /jsonWithHttp/savePlace             controllers.json.with_http.JsonWithHttpExamplesController.savePlace
+POST    /jsonWithHttp/savePlaceConcise      controllers.json.with_http.JsonWithHttpExamplesController.savePlaceConcise
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET   /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
