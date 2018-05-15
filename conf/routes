@@ -72,6 +72,9 @@ GET     /jsonWithHttp/listPlaces            controllers.json.with_http.JsonWithH
 POST    /jsonWithHttp/savePlace             controllers.json.with_http.JsonWithHttpExamplesController.savePlace
 POST    /jsonWithHttp/savePlaceConcise      controllers.json.with_http.JsonWithHttpExamplesController.savePlaceConcise
 
+# Examples from "Handling asynchronous results"
+GET     /asyncResultsExamples/index                 controllers.async_http_programming.HandlingAsyncResultsController.index
+GET     /asyncResultsExamples/handlingTimeout       controllers.async_http_programming.HandlingAsyncResultsController.handlingTimeout
 
 # Map static resources from the /public folder to the /assets URL path
 GET   /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
