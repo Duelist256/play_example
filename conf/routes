@@ -76,5 +76,17 @@ POST    /jsonWithHttp/savePlaceConcise      controllers.json.with_http.JsonWithH
 GET     /asyncResultsExamples/index                 controllers.async_http_programming.HandlingAsyncResultsController.index
 GET     /asyncResultsExamples/handlingTimeout       controllers.async_http_programming.HandlingAsyncResultsController.handlingTimeout
 
+# Examples from "Streaming HTTP responses"
+GET     /streamingHttpResponses/index                       controllers.streaming_http_responses.StreamingHttpResponsesController.index
+GET     /streamingHttpResponses/action                      controllers.streaming_http_responses.StreamingHttpResponsesController.action
+GET     /streamingHttpResponses/streamed                    controllers.streaming_http_responses.StreamingHttpResponsesController.streamed
+GET     /streamingHttpResponses/streamedWithContentLength   controllers.streaming_http_responses.StreamingHttpResponsesController.streamedWithContentLength
+GET     /streamingHttpResponses/sendFile                    controllers.streaming_http_responses.StreamingHttpResponsesController.sendFile
+GET     /streamingHttpResponses/sendFileWithName            controllers.streaming_http_responses.StreamingHttpResponsesController.sendFileWithName
+GET     /streamingHttpResponses/sendFileAsAttachment        controllers.streaming_http_responses.StreamingHttpResponsesController.sendFileAsAttachment
+GET     /streamingHttpResponses/chunked                     controllers.streaming_http_responses.StreamingHttpResponsesController.chunked
+GET     /streamingHttpResponses/chunkedFromSource           controllers.streaming_http_responses.StreamingHttpResponsesController.chunkedFromSource
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET   /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
